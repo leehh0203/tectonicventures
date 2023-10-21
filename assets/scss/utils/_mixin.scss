@@ -1,0 +1,27 @@
+
+
+$desktop: 1280px;
+$tabelt: 1023px;
+$mobile: 767px;
+$footergraphic: 767px;
+
+@mixin desktop(){
+    @media (max-width:$desktop) {
+        @content;
+    }
+}
+@mixin tabelt(){
+    @media (max-width:$tabelt) {
+        @content;
+    }
+}
+@mixin mobile(){
+    @media (max-width:$mobile) {
+        @content;
+    }
+}
+@mixin footergraphic(){
+    @media (min-width:$footergraphic) {
+        @content;
+    }
+}
