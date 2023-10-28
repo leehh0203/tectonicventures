@@ -184,60 +184,6 @@ body::-webkit-scrollbar {
 .header-inner h1 a {
   display: block;
 }
-.header-inner .gnb {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  grid-area: 1/2/2/3;
-  gap: 2rem;
-  align-self: center;
-  margin-left: -0.3rem;
-}
-@media (max-width: 1023px) {
-  .header-inner .gnb {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .header-inner .gnb {
-    display: none;
-  }
-}
-.header-inner .gnb a {
-  position: relative;
-  color: #1c2729;
-  letter-spacing: 0.02rem;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  padding: 0.3rem;
-  font-size: 0.75rem;
-  line-height: 0.8rem;
-}
-.header-inner .gnb a .text {
-  position: relative;
-  z-index: 7;
-}
-.header-inner .gnb a .bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.header-inner .gnb a:nth-child(1):hover .bg {
-  width: 100%;
-  background-color: #c6e7ec;
-}
-.header-inner .gnb a:nth-child(2):hover .bg {
-  width: 100%;
-  background-color: #fee0c7;
-}
-.header-inner .gnb a:nth-child(3):hover .bg {
-  width: 100%;
-  background-color: #e7e3d6;
-}
 .header-inner .text-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,6 +263,61 @@ body::-webkit-scrollbar {
   .header .intro-bg {
     display: none;
   }
+}
+
+.gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-area: 1/2/2/3;
+  gap: 2rem;
+  align-self: center;
+  margin-left: -0.3rem;
+}
+@media (max-width: 1023px) {
+  .gnb {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .gnb {
+    display: none;
+  }
+}
+.gnb a {
+  position: relative;
+  color: #1c2729;
+  letter-spacing: 0.02rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0.3rem;
+  font-size: 0.75rem;
+  line-height: 0.8rem;
+}
+.gnb a .text {
+  position: relative;
+  z-index: 7;
+}
+.gnb a .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.gnb a:nth-child(1):hover .bg {
+  width: 100%;
+  background-color: #c6e7ec;
+}
+.gnb a:nth-child(2):hover .bg {
+  width: 100%;
+  background-color: #fee0c7;
+}
+.gnb a:nth-child(3):hover .bg {
+  width: 100%;
+  background-color: #e7e3d6;
 }
 
 .group-m-menu {
@@ -947,7 +948,10 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 767px) {
   .sc-visual-inner .col-left {
-    grid-row-gap: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -955,9 +959,6 @@ body::-webkit-scrollbar {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 .sc-visual-inner .col-left .text-group {
@@ -980,8 +981,8 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 .sc-visual-inner .col-left .text-group .text-inner span {
-  line-height: 3.4rem;
   display: inline-block;
+  line-height: 3.4rem;
 }
 .sc-visual-inner .col-left .text-group .text-inner .blue {
   margin-right: 9px;
@@ -1577,7 +1578,6 @@ body::-webkit-scrollbar {
   }
 }
 .sc-vision .group-bottom {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1586,6 +1586,7 @@ body::-webkit-scrollbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   margin-top: 5rem;
   position: relative;
   top: -1px;
@@ -1619,8 +1620,6 @@ body::-webkit-scrollbar {
   background-color: rgb(138, 26, 35);
 }
 .sc-vision .group-bottom .menu-box a {
-  position: relative;
-  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1630,6 +1629,8 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 2;
   width: 50%;
   height: 4rem;
   -webkit-transition: background 0.3s;
@@ -1842,11 +1843,11 @@ body::-webkit-scrollbar {
   }
 }
 .sc-advisors-inner .advisors-list {
+  display: grid;
   gap: 0.5vw;
   grid-template: "." 14.5vw "." 14.5vw "." 14.5vw "." 14.5vw "." 14.5vw/1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   padding-bottom: 10rem;
-  display: grid;
   position: relative;
 }
 @media (max-width: 1023px) {
@@ -2135,18 +2136,18 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 767px) {
   .sc-advisors-inner .show-more {
-    height: 3rem;
-    background-color: #fee0c7;
-    border-radius: 0.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    height: 3rem;
+    background-color: #fee0c7;
+    border-radius: 0.1rem;
   }
   .sc-advisors-inner .show-more span {
     color: #9e232d;
@@ -2585,11 +2586,11 @@ body::-webkit-scrollbar {
   }
 }
 .sc-directory .group-bottom ul li .inner {
-  position: relative;
-  z-index: 77;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 77;
   margin: 0 auto;
   max-width: 75vw;
   padding-left: 1rem;
@@ -2642,28 +2643,18 @@ body::-webkit-scrollbar {
 }
 @media (max-width: 1280px) {
   .sc-directory .group-bottom ul li .inner .descriptor {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     width: 62%;
   }
 }
 @media (max-width: 1023px) {
   .sc-directory .group-bottom ul li .inner .descriptor {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     width: 60%;
   }
 }
 @media (max-width: 767px) {
   .sc-directory .group-bottom ul li .inner .descriptor {
-    width: auto;
     font-size: 1rem;
     line-height: 1.6rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     width: 90%;
   }
 }

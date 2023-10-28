@@ -10,7 +10,6 @@
         padding-top: 30svh;
         padding-left: 1.5rem;
     }
-
     @include mobile{
         padding-top: 15svh;
         padding-left: 1.5rem;
@@ -25,7 +24,6 @@
         padding-bottom: 2.5rem;
         
         @include tabelt{ height: 70svh;}
-
         @include mobile{
             display: flex;
             flex-direction: column;
@@ -40,10 +38,10 @@
             justify-content: space-between;
 
             @include mobile{
-                grid-row-gap: 2rem;
+                display: flex;
+                gap: 2rem;
                 flex-direction: column;
                 justify-content: flex-end;
-                display: flex;
             }
 
             .text-group{
@@ -62,32 +60,25 @@
                 .text-inner{
                     overflow: hidden;
                     span{
-                        line-height:3.4rem;
                         display: inline-block;
+                        line-height:3.4rem;
                     }
                     .blue{
                         margin-right: 9px;
                         color: #1973c2;
                         font-style: italic;
                         font-weight: 500;
-
                     }
                 }
-                .text-inner + .text-inner{
-                    margin-top: -0.6rem;
-                }
-                .text-inner:first-child{
-                    margin-top: -0.25rem;
-                }
+                .text-inner + .text-inner{ margin-top: -0.6rem; }
+                .text-inner:first-child{ margin-top: -0.25rem; }
             }
-
             p{
                 max-width: 18rem;
                 letter-spacing: .005rem;
                 font-size: 1.09375rem;
                 line-height: 1.5rem;
             }
-            
             .m-box{
                 @include mobile{
                     width: 100%;
@@ -97,7 +88,6 @@
             }
         }
         .col-right{
-
             .group-video{
                 position: relative;
                 grid-area: span 1/span 1/span 1/span 1;      
@@ -120,9 +110,7 @@
                     // -webkit-backface-visibility: hidden;
                     // -moz-backface-visibility: hidden;
 
-                    @include mobile{
-                        display: none;
-                    }
+                    @include mobile{ display: none; }
                 }
             }
 
@@ -133,9 +121,7 @@
             height: 30%;
             transform: translateY(-260%);
 
-            @include mobile{
-                display: none;
-            }
+            @include mobile{ display: none; }
         }
         .box2{
             position: absolute;
@@ -148,9 +134,7 @@
             transform: translateY(-130%);
             background-color: #003858;
 
-            @include mobile{
-                display: none;
-            }
+            @include mobile{ display: none; }
         }
     }
 }
@@ -177,7 +161,6 @@
             max-width: 100%;
             margin: 0 1.5rem;
         }
-
         @include mobile{
             max-width: 100%;
             margin: 0 1.5rem;
@@ -202,7 +185,6 @@
                     height: 11px;
                     margin-bottom: 3px;
                 }
-
                 @include mobile{
                     height: 9.825px;
                     margin-bottom: 3px;
@@ -232,18 +214,14 @@
             font-size: 4.375rem;
             font-weight: 400;
             line-height: 4.2rem;
-            &-bottom{
-                margin-bottom: 0.2em;
-            }
+            &-bottom{ margin-bottom: 0.2em; }
 
             @include desktop{ max-width: 58rem; }
-
             @include tabelt{
                 max-width: 58rem;
                 font-size: 3rem;
                 line-height: 3.2rem;
             }
-
             @include mobile{
                 flex: 1;
                 letter-spacing: -.05rem;
@@ -251,9 +229,7 @@
                 line-height: 2.2rem;
             }
 
-            .item{
-                display: inline-block;
-            }
+            .item{ display: inline-block; }
             .green{
                 color: #0fa969;
                 font-style: italic;
@@ -268,7 +244,6 @@
         position: relative;
 
         @include tabelt{ height: 10rem; }
-
         @include mobile{
             grid-template-columns: repeat(2,1fr);
             height: 10rem;
@@ -287,7 +262,6 @@
                 height: 25rem;
                 top: -15rem;
             }
-
             @include mobile{
                 grid-area:  1/span 2/span 1/span 2;
                 width: 50%;
@@ -311,7 +285,6 @@
                 height: 10rem;
                 top: 1.5rem;
             }
-
             @include mobile{
                 grid-area: span 1/span 1/span 1/span 1;
                 width: 50%;
@@ -325,7 +298,6 @@
         display: flex;
 
         @include tabelt{ flex-wrap: wrap; }
-
         @include mobile{ display: block; }
 
         &-inner{
@@ -339,7 +311,6 @@
             position: relative;
 
             @include tabelt{ width: 50%; }
-
             @include mobile{
                 width: 100%;
                 margin-top: 0;
@@ -354,10 +325,7 @@
                 font-weight: 400;
                 line-height: 2.8rem;
                 overflow: hidden;
-                .text-item{
-                    display: inline-block;
-                    // transform: translateY(-110%);
-                }
+                .text-item{ display: inline-block; }
                 .text-item:first-child{
                     margin-right: 1rem;
                     letter-spacing: -.03rem;
@@ -373,7 +341,6 @@
                     width: 35vw;
                     margin: 0 auto;
                 }
-
                 @include mobile{
                     width: 60vw;
                     padding-top: 2rem;
@@ -420,13 +387,13 @@
             background-color: #e1eeda;
 
             @include tabelt{ transform: translate3d(0px, 0px, 0px); }
-
             @include mobile{ transform: translate3d(0px, 0px, 0px); }
 
             h3{
                 color: #004230;
                 div:first-child{ color: #0fa969; }
             }
+
             p{ color: #004230; }
             
         }
@@ -445,7 +412,6 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
-
     @include mobile{
         padding: 0;
         padding-top: 8rem;
@@ -460,7 +426,6 @@
         padding-bottom: 1rem;
 
         @include tabelt{ max-width: none;padding-bottom: 9.5rem;}
-
         @include mobile{
             max-width: 100%;
             padding-left: 1.5rem;
@@ -476,10 +441,7 @@
             padding-top: 0.5rem;
 
             @include tabelt{ width: 20%; }
-
-            @include mobile{
-                width: 25%;
-            }
+            @include mobile{ width: 25%; }
 
             .event-box{
                 height: 12.5938px;
@@ -488,7 +450,6 @@
                 margin-bottom: 0.25rem;
 
                 @include mobile{ height: 9.825px; }
-
                 @include tabelt{ height: 10.2812px; }
                 
             }
@@ -522,24 +483,21 @@
                 line-height: 3.2rem;
                 margin-bottom: -5.5rem;
             }
-
             @include mobile{
                 letter-spacing: -.05rem;
                 font-size: 2.2rem;
                 line-height: 2.2rem;
             }
+
             &-top{
                 overflow: hidden;
                 padding-bottom: 1rem;
-                .item{
-                    display: inline-block;
-                }
+                .item{ display: inline-block; }
 
                 @include desktop{
                     height: 100%;
                     margin-bottom: -2.7rem;
                 }
-
                 @include mobile{
                     width: 100%;
                     margin-bottom: -4.7rem;
@@ -562,35 +520,24 @@
                 font-size: 1.09375rem;
                 line-height: 1.5rem;
 
-                @include desktop{
-                    max-width: 38rem;
-                }
+                @include desktop{ max-width: 38rem; }
+                @include tabelt{ margin-top: 1.5rem; }
+                @include mobile{ margin-top: 2rem; }
 
-                @include tabelt{
-                    margin-top: 1.5rem;
-                }
-
-                @include mobile{
-                    margin-top: 2rem;
-                }
-
-                
             }
         }
     }
 
     .group-bottom{
-        position: relative;
         display: flex;
         gap: 2rem;
         flex-direction: column;
+        position: relative;
         margin-top: 5rem;
         position: relative;
         top: -1px;
 
-        @include mobile{
-            margin-top: 5rem;
-        }
+        @include mobile{ margin-top: 5rem; }
 
         .menu-box{
             z-index: 90;
@@ -614,25 +561,18 @@
                 }
             }
             a{  
-                position: relative;
-                z-index: 2;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: relative;
+                z-index: 2;
                 width: 50%;
                 height: 4rem;
                 transition: background 0.3s;             
                 &:last-child{
-                    &:hover{
-                        background-color: #ede6d8;
-                    }
-                    &:hover .line{
-                        display: none;
-                    }
+                    &:hover{ background-color: #ede6d8; }
+                    &:hover .line{ display: none; }
                 }
-
-
-                // transition: all .3s;
                 span{
                     position: relative;
                     z-index: 2;
@@ -642,8 +582,7 @@
                     font-size: .75rem;
                     line-height: .8rem;
                 }
-                .m-span{ @include mobile{ display: none; }
-                }
+                .m-span{ @include mobile{ display: none; } }
                 .line{
                     z-index: 1;
                     width: 100%;
@@ -654,8 +593,6 @@
                     left: 0%;
                     right: auto;
                 }
-
-                
             }
         }
         .team_list{
@@ -692,7 +629,6 @@
                     grid-area: span 1/span 1/span 1/span 1;
                     grid-row-gap: 0.5rem;
                     padding-right: 2rem;
-
                     h3{
                         color: #8a1a23;
                         letter-spacing: -.02rem;
@@ -701,11 +637,9 @@
                         font-weight: 400;
                         line-height: 2rem;
                         overflow: hidden;
-
                         .item{ display: inline-block; }
                         .item+.item{ margin-left: 6px; }
                     }
-
                     .part{
                         color: #1c2729;
                         letter-spacing: .08rem;
@@ -734,7 +668,6 @@
                     cursor: pointer;
                     position: relative;
                     overflow: hidden;
-
                     .btn-link{
                         width: 3.5rem;
                         height: 3.5rem;
@@ -749,9 +682,7 @@
                 grid-template:
                 "Image"
                 "Image"/1fr 1fr;
-                .top-text{
-                    padding-left: 1rem;
-                }
+                .top-text{ padding-left: 1rem; }
                 .bottom-text{
                     grid-area: 2/2/3/3;
                     padding-left: 1rem;
@@ -769,14 +700,11 @@
     margin-top: 10rem;
     padding: 0 2.5rem;
 
-    
-
     @include tabelt{
         width: 100%;
         margin-top: 5rem;
         padding: 0 1.5rem;
     }
-
     @include mobile{
         margin-top: 5rem;
         padding: 0 1.5rem;
@@ -789,12 +717,10 @@
         margin-right: auto;
 
         @include tabelt{ max-width: none; }
-
         @include mobile{
             max-width: 100vw;
             margin: 0;
         }
-
 
         .top{
             display: block;
@@ -808,10 +734,11 @@
             line-height: .8rem;
 
             @include tabelt{ margin-bottom: 3rem; }
-
             @include mobile{ margin-bottom: 3rem; }
+
         }
         .advisors-list{
+            display: grid;
             gap: 0.5vw;
             grid-template:
                 "."14.5vw
@@ -821,11 +748,9 @@
                 "."14.5vw/1fr 1fr 1fr 1fr 1fr;
             grid-auto-columns: 1fr;
             padding-bottom: 10rem;
-            display: grid;
             position: relative;
 
             @include tabelt{ grid-template-rows: 18vw 18vw 18vw 18vw 18vw; }
-
             @include mobile{
                 display: grid;
                 gap: 1rem;
@@ -884,7 +809,6 @@
                             width: 3rem;
                             height: 3rem;
                         }
-
                         @include mobile{
                             width: 3rem;
                             height: 3rem;
@@ -901,7 +825,6 @@
                         grid-row-gap: 0.2rem;
                         margin-top: 0.5rem;
                     }
-
                     @include mobile{
                         grid-row-gap: 0.2rem;
                         margin-top: 0.5rem;
@@ -914,7 +837,6 @@
                         line-height: 1.35rem;
 
                         @include tabelt{ font-size: 1.1rem; }
-
                         @include mobile{ font-size: 1.1rem; }
                     }
                     .mini-text{
@@ -954,12 +876,12 @@
             display: none;
 
             @include mobile{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 height: 3rem;
                 background-color: #fee0c7;
                 border-radius: 0.1rem;
-                justify-content: center;
-                align-items: center;
-                display: flex;
                 span{
                     color: #9e232d;
                     letter-spacing: .08rem;
@@ -989,7 +911,6 @@
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
-
         @include mobile{
             padding-left: 1.5rem;
             padding-right: 1.5rem;
@@ -1010,7 +931,6 @@
             color: #fbf9ed;
 
             @include tabelt{max-width: none;}
-
             @include mobile{ max-width: 100%; }
         }
     }
@@ -1020,89 +940,81 @@
         flex-direction: column;
         margin-bottom: 5rem;
         display: flex;
+        .decoration-item{
+            display: flex;
+            gap: 1rem;
+            width: 150vw;
+            align-items: center;
 
-        @include mobile{}
+            @include mobile{ height: 10.3vh; }
 
-            .decoration-item{
-                display: flex;
-                gap: 1rem;
-                width: 150vw;
-                align-items: center;
+            .text{
+                opacity: .2;
+                color: #fbf9ed;
+                letter-spacing: -.2rem;
+                font-family: 'Signifier',sans-serif;
+                font-size: 11.8vw;
+                line-height: 8rem;
 
-                @include mobile{ height: 10.3vh; }
-
-                .text{
-                    opacity: .2;
-                    color: #fbf9ed;
-                    letter-spacing: -.2rem;
-                    font-family: 'Signifier',sans-serif;
-                    font-size: 11.8vw;
-                    line-height: 8rem;
-
-                    @include mobile{
-                        letter-spacing: -.1rem;
-                        white-space: nowrap;
-                        font-size: 4.5rem;
-                        line-height: 4.5rem;
-                    }
-
-                    span{
-                        font-style: italic;
-                        font-weight: 500;
-                    }
+                @include mobile{
+                    letter-spacing: -.1rem;
+                    white-space: nowrap;
+                    font-size: 4.5rem;
+                    line-height: 4.5rem;
                 }
-                .box{
-                    position: relative;
-                    width: 100vw;
-                    height: 15vw;
-                    background-color: #202829;
 
-                    @include tabelt{ height: 21vh;}
-
-                    @include mobile{ height: 5rem; }
-
-                    .img-1{
-                        width: 18%;
-                        position: absolute;
-                        top: 20%;
-                        left: 18%;
-                    }
-                    .img-mask{
-                        z-index: 1;
-                        width: 100%;
-                        height: 25vh;
-                        background-color: #161e20;
-                        position: absolute;
-                        top: auto;
-                        bottom: -25vh;
-                        left: 0%;
-                        right: auto;
-                    }
-                    .img-2{
-                        width: 11%;
-                        position: absolute;
-                        bottom: 70%;
-                        left: 10%;
-                        
-                    }
+                span{
+                    font-style: italic;
+                    font-weight: 500;
                 }
             }
-            .inner1{ width: 150vw; transform: translateX(-20%); }
-            .inner2{
-                width: 202vw;
+            .box{
                 position: relative;
-                z-index: 7;
-                .box{
-                    width: 90vw;
-                }
-            }
-            .inner3{
-                width: 198vw;
-                transform: translateX(-30%);
+                width: 100vw;
+                height: 15vw;
+                background-color: #202829;
 
-                .text{ margin-right: 3rem; 
+                @include tabelt{ height: 21vh;}
+                @include mobile{ height: 5rem; }
+
+                .img-1{
+                    width: 18%;
+                    position: absolute;
+                    top: 20%;
+                    left: 18%;
+                }
+                .img-mask{
+                    z-index: 1;
+                    width: 100%;
+                    height: 25vh;
+                    background-color: #161e20;
+                    position: absolute;
+                    top: auto;
+                    bottom: -25vh;
+                    left: 0%;
+                    right: auto;
+                }
+                .img-2{
+                    width: 11%;
+                    position: absolute;
+                    bottom: 70%;
+                    left: 10%;
+                    
                 }
             }
+        }
+        .inner1{ width: 150vw; transform: translateX(-20%); }
+        .inner2{
+            width: 202vw;
+            position: relative;
+            z-index: 7;
+            .box{ width: 90vw; }
+        }
+        .inner3{
+            width: 198vw;
+            transform: translateX(-30%);
+            .text{ margin-right: 3rem; }
+        }
     }
     .group-bottom{
         padding: 0 2.5rem;
@@ -1173,7 +1085,6 @@
             padding-left: 1rem;
             padding-right: 1rem;
         }
-
         @include mobile{
             max-width: none;
             padding: 0 1rem;
@@ -1202,7 +1113,6 @@
                 margin-bottom: 0.25rem;
 
                 @include tabelt{ height: 10.2344px; margin-bottom: 0.25rem;}
-
                 @include mobile{ height: 9.825px; margin-bottom: 0.25rem;}
             }
             .number{
@@ -1229,15 +1139,11 @@
             line-height: 4.2rem;
             overflow: hidden;
             
-            @include desktop{
-                max-width: 30rem;
-            }
-
+            @include desktop{ max-width: 30rem; }
             @include tabelt{ 
                 font-size: 3rem;
                 line-height: 3.2rem;
             }
-
             @include mobile{
                 width: 100%;
                 letter-spacing: -.05rem;
@@ -1304,7 +1210,6 @@
                 line-height: 2rem;
                 font-weight: 300;
                 border-bottom: 1px solid #c9c7be;
-                
                 &:hover .hover-bg{
                     height: 100%;
                     transition: 0.5s cubic-bezier(0, 0.4, 0.19, 0.99);
@@ -1321,13 +1226,12 @@
                     transition: 0.5s cubic-bezier(0, 0.4, 0.19, 0.99);
                 }
                 
-
                 @include mobile{ height: 4rem; }
 
                 .inner{
+                    display: flex;
                     position: relative;
                     z-index: 77;
-                    display: flex;
                     margin: 0 auto;
                     max-width: 75vw;
                     padding-left: 1rem;
@@ -1337,7 +1241,6 @@
                         max-width: none;
                         font-size: 1rem;
                     }
-
                     @include mobile{
                         gap: 2px;
                         position: relative;
@@ -1355,7 +1258,6 @@
                             white-space: nowrap;
                             text-overflow: ellipsis;
                         }
-
                         @include mobile{
                             width: auto;
                             font-size: 1.1rem;
@@ -1369,27 +1271,11 @@
                         white-space: nowrap;
                         text-overflow: ellipsis;
 
-                        @include desktop{
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            width: 62%;
-                        }
-
-                        @include tabelt{
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                            width: 60%;
-                        }
-
+                        @include desktop{ width: 62%; }
+                        @include tabelt{ width: 60%; }
                         @include mobile{
-                            width: auto;
                             font-size: 1rem;
                             line-height: 1.6rem;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
                             width: 90%;
                         }
                     }
@@ -1435,14 +1321,12 @@
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-
             @include tabelt{
                 margin-left: 0;
                 padding: 0 1rem;
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-
             @include mobile{
                 margin-left: 0;
                 padding: 0 1rem;

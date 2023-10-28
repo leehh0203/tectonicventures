@@ -9,9 +9,12 @@ var logoAnimation = bodymovin.loadAnimation({
     autoplay: false,
   });
 
+//딜레이
   setTimeout(() => {
     logoAnimation.play();
   }, 3000);
+
+
 
 // intro
 //pc,테블릿
@@ -44,6 +47,7 @@ let mm3 = gsap.matchMedia();
         },"4")
 
 });
+
 //모바일
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +70,7 @@ let mm4 = gsap.matchMedia();
 
 
 
-//header
+//header 모바일
 //햄버거 메뉴
 var menuAnimation = bodymovin.loadAnimation({
     container: $('.btn-motion')[0],
@@ -81,7 +85,6 @@ var isAnimationReversed = false; // 애니메이션의 방향을 추적하는 �
 
 $('.btn-menu').click(function(){
     // 클래스를 토글하지 않고 변수를 사용하여 애니메이션 방향을 추적
-
 
     if (isAnimationReversed){
         menuTl.reverse();
@@ -108,10 +111,6 @@ menuTl
 .to('.group-m-menu .deco-box',{duration:1.2,ease:'power3',transform:'translateY(0)'},'a')
 .from('.group-m-menu .box1',{delay: 0.4,duration:1.5,ease:'power3',top:'0'},"a")
 
-//메뉴 스크롤시 숨김
-// gsap.set('.top-menu',{ transform: 'translateY(0)' })
-// gsap.set('.top-menu-bg',{ transform: 'translateY(0)' })
-
 const menuT2 = gsap.timeline({})
     menuT2
     .to('.top-menu',{transform: 'translateY(0)',ease:'power3',duration:1,},'a')
@@ -123,8 +122,6 @@ ScrollTrigger.create({
         self.direction === -1 ? menuT2.play() : menuT2.reverse()
     }
 });
-
-
 
 //링크 클릭시 메뉴 접기
 $('.group-m-menu .top-list a').click(function(){
@@ -138,6 +135,7 @@ $('.group-m-menu .top-list a').click(function(){
 
 
 //sc-newidea
+//h2
 const texteventTl = gsap.timeline({
     scrollTrigger: {
         trigger:".sc-newidea .group-text",
@@ -193,29 +191,29 @@ ScrollTrigger.batch('.group-card-inner .text-item', { //여러개 같이 쓰일�
 });
 
 //카드 도형 lottie
-var animation1 = bodymovin.loadAnimation({
-    container: $('.lottie1')[0],
-    path: './assets/data/motion1.json', 
-    renderer: 'svg', 
-    loop: true, 
-    autoplay: true 
-  });
+// var animation1 = bodymovin.loadAnimation({
+//     container: $('.lottie1')[0],
+//     path: './assets/data/motion1.json', 
+//     renderer: 'svg', 
+//     loop: true, 
+//     autoplay: true 
+//   });
   
-var animation2 = bodymovin.loadAnimation({
-container: $('.lottie2')[0],
-path: './assets/data/motion2.json', 
-renderer: 'svg', 
-loop: true, 
-autoplay: true 
-});
+// var animation2 = bodymovin.loadAnimation({
+//     container: $('.lottie2')[0],
+//     path: './assets/data/motion2.json', 
+//     renderer: 'svg', 
+//     loop: true, 
+//     autoplay: true 
+// });
 
-var animation3 = bodymovin.loadAnimation({
-container: $('.lottie3')[0], // Required
-path: './assets/data/motion3.json', 
-renderer: 'svg', 
-loop: true, 
-autoplay: true 
-});
+// var animation3 = bodymovin.loadAnimation({
+//     container: $('.lottie3')[0], // Required
+//     path: './assets/data/motion3.json', 
+//     renderer: 'svg', 
+//     loop: true, 
+//     autoplay: true 
+// });
 
 
 
@@ -293,7 +291,7 @@ ScrollTrigger.batch('.sc-vision .team_item .item', { //여러개를 선택할때
     },
   });
 
- //버튼 로티 
+//버튼 로티 호버했을때 모션
 const btnContainers = document.querySelectorAll(".btn-lottie");
 btnContainers.forEach(container => {
   container.addEventListener("mouseover", () => {
@@ -312,6 +310,7 @@ btnContainers.forEach(container => {
 
 
 //sc-advisors
+//h2
 gsap.registerPlugin(ScrollTrigger);
 
 let mm2 = gsap.matchMedia();
@@ -355,6 +354,7 @@ decorationT1.from('.sc-definition .box img',0.3,{yPercent:200},"a")
 decorationT1.to('.sc-definition .inner1',{ xPercent:20},"a")
 decorationT1.to('.sc-definition .inner2',{ xPercent:-30},"a")
 decorationT1.to('.sc-definition .inner3',{ xPercent:30},"a")
+
 //text
 gsap.utils.toArray('.sc-definition .text').forEach(item => {
 
@@ -375,7 +375,7 @@ gsap.utils.toArray('.sc-definition .text').forEach(item => {
 
 
 //sc-directory
-//제목
+//h2
 ScrollTrigger.batch('.sc-directory .group-text .item', { //여러개를 선택할때 쓰는거 batch
     start: "0 100%",
     // markers:true,
@@ -417,19 +417,6 @@ gsap.from('.sc-directory ul > *',{
     yPercent:100,
     stagger:0.1,
 })
-// //list-hover
-// $('.sc-directory .group-bottom li').hover(function(){
-//     gsap.utils.toArray('.sc-directory .group-bottom>li').forEach(item => {
-
-//         gsap.to(item,{
-//             duration:0.8,
-//             opacity:0,
-//         })
-    
-//       });
-
-// })
-
 
 
 
@@ -453,6 +440,7 @@ footerTl.to('.footer-graphic ._4',{top: '0',ease:'power3'},"a")
 footerTl.to('.footer-graphic ._5',{height: '55%',ease:'power3'},"a")
 footerTl.to('.footer-graphic ._6',{top: '214.15px',ease:'power3'},"a")
 footerTl.to('.footer-graphic ._7',{height: '40%',ease:'power3'},"a")
+
 //마우스 이벤트
 const customCursor = document.querySelector(".mouse");
 $('.footer-graphic').mousemove(function(e){
@@ -461,8 +449,9 @@ $('.footer-graphic').mousemove(function(e){
         y: e.clientY,
     });
 })
+
 //도형 배경 투명하게 하기
-const graphicItem = document.querySelectorAll('.graphic_item');
+// const graphicItem = document.querySelectorAll('.graphic_item');
 $('.graphic_item').hover(function(){
     $('.graphic_item').addClass('on')
     $('.mouse').addClass('show')
@@ -470,8 +459,8 @@ $('.graphic_item').hover(function(){
 },function(){
     $('.mouse').removeClass('show')
     $('.graphic_item').removeClass('on')
-
 })
+
 //도형 y축이동
 Draggable.create(".graphic_item", {
     type:"y",
