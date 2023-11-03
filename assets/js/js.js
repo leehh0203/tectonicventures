@@ -335,7 +335,7 @@ let mm2 = gsap.matchMedia();
 
 });
 //더보기
-$('.show-more').click(function(){ $('.advisors-list').toggleClass('show') })
+$('.show-more').click(function(){ $('.advisors-list').addClass('show') })
 
 
 
