@@ -7,9 +7,9 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     padding-left: 2.4rem;
+    overflow: hidden;
 
-    @include tabelt{
-        height: 5rem;
+    @include tablet{
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -21,17 +21,25 @@
             grid-template-columns: 3.5fr 4.25fr 1fr 1fr;
             h1{
                 position: absolute;
-                z-index: 8;
+                z-index: 151;
                 width: 54.25rem;
                 height: 100%;
                 
                 .logo-lottie{
                     opacity: 0;
+    
                     @include mobile{ display: none; }
+                    
                 }
 
-                @include tabelt{ width: 229px }
-                @include mobile{ width: 214px }
+                @include tablet{
+                    position: fixed;
+                    width: 90%;
+                    height: 100%;
+                    transform: translateY(-100%);
+                }
+                
+                @include mobile{ width: 214px;height: 30px; }
 
                 a{ display: block; }
             }
@@ -46,7 +54,7 @@
                 font-size: .75rem;
                 line-height: .8rem;
 
-                @include tabelt{ display: none; }
+                @include tablet{ display: none; }
                 @include mobile{ display: none; }
 
                 &:hover{
@@ -78,14 +86,14 @@
                 grid-area: 1/4/2/4;
                 padding-right: 2.4rem;
 
-                @include tabelt{ display: none; }
+                @include tablet{ display: none; }
                 @include mobile{ display: none; }
 
             }
     }
     .intro-bg{
         position: absolute;
-        z-index: 7;
+        z-index: 150;
         width: 100%;
         height: 100vh;
         top: 0;

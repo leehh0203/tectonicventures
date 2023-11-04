@@ -20,7 +20,7 @@
         border-top: 1px solid #c9c7be;
         padding: 1.25rem 5rem 0 1rem;
 
-        @include tabelt{ 
+        @include tablet{ 
             display: flex;
             flex-direction: column;
             gap: 2.5rem;
@@ -42,7 +42,7 @@
                 padding-bottom: 0.05rem;
                 font-size: 1.09rem;
 
-                @include tabelt{ font-size: 1.2rem; }
+                @include tablet{ font-size: 1.2rem; }
                 @include mobile{ font-size: 1.2rem; }
             }
     
@@ -80,7 +80,7 @@
                     font-size: .75rem;
                     line-height: .8rem;
 
-                    @include tabelt{
+                    @include tablet{
                         letter-spacing: .06rem;
                         font-size: .95rem;
                         line-height: 1rem;
@@ -148,7 +148,7 @@
         position: relative;
         overflow: hidden;
 
-        @include tabelt{ height: 50vh; }
+        @include tablet{ height: 50vh; }
         @include mobile{ height: 50vh; }
 
         .mouse{

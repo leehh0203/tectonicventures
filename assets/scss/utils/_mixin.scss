@@ -1,7 +1,7 @@
 
 
 $desktop: 1280px;
-$tabelt: 1023px;
+$tablet: 1023px;
 $mobile: 767px;
 $footergraphic: 767px;
 
@@ -10,8 +10,8 @@ $footergraphic: 767px;
         @content;
     }
 }
-@mixin tabelt(){
-    @media (max-width:$tabelt) {
+@mixin tablet(){
+    @media (max-width:$tablet) {
         @content;
     }
 }

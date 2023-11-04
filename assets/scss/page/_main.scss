@@ -6,7 +6,7 @@
     overflow: hidden;
     padding-left: 2.5rem;
 
-    @include tabelt{
+    @include tablet{
         padding-top: 30svh;
         padding-left: 1.5rem;
     }
@@ -23,7 +23,7 @@
         grid-auto-columns: 1fr;
         padding-bottom: 2.5rem;
         
-        @include tabelt{ height: 70svh;}
+        @include tablet{ height: 70svh;}
         @include mobile{
             display: flex;
             flex-direction: column;
@@ -146,7 +146,7 @@
     min-height: 150vh;
     padding-top: 22rem;
 
-    @include tabelt{ padding-top: 12rem; }
+    @include tablet{ padding-top: 12rem; }
 
     .group-text{
         display: flex;
@@ -157,7 +157,7 @@
         border-bottom: 1px solid #c9c7be;
         padding-top: 2rem;
 
-        @include tabelt{
+        @include tablet{
             max-width: 100%;
             margin: 0 1.5rem;
         }
@@ -181,7 +181,7 @@
                 height: 12.5938px;
                 background-color: #0fa969;
 
-                @include tabelt{
+                @include tablet{
                     height: 11px;
                     margin-bottom: 3px;
                 }
@@ -217,7 +217,7 @@
             &-bottom{ margin-bottom: 0.2em; }
 
             @include desktop{ max-width: 58rem; }
-            @include tabelt{
+            @include tablet{
                 max-width: 58rem;
                 font-size: 3rem;
                 line-height: 3.2rem;
@@ -243,7 +243,7 @@
         height: 25rem;
         position: relative;
 
-        @include tabelt{ height: 10rem; }
+        @include tablet{ height: 10rem; }
         @include mobile{
             grid-template-columns: repeat(2,1fr);
             height: 10rem;
@@ -257,7 +257,7 @@
             height: 40rem;
             background-color: #e1eeda;
 
-            @include tabelt{
+            @include tablet{
                 grid-area: 1/2/2/3;
                 height: 25rem;
                 top: -15rem;
@@ -279,7 +279,7 @@
             grid-area: 1/3/2/4;
             background-color: #0fa969;
 
-            @include tabelt{
+            @include tablet{
                 grid-area: 1/3/2/4;
                 width: 50%;
                 height: 10rem;
@@ -297,7 +297,7 @@
     .group-card{
         display: flex;
 
-        @include tabelt{ flex-wrap: wrap; }
+        @include tablet{ flex-wrap: wrap; }
         @include mobile{ display: block; }
 
         &-inner{
@@ -310,7 +310,7 @@
             padding: 1.8rem;
             position: relative;
 
-            @include tabelt{ width: 50%; }
+            @include tablet{ width: 50%; }
             @include mobile{
                 width: 100%;
                 margin-top: 0;
@@ -337,7 +337,7 @@
                 width: 22vw;
                 margin: 0 auto;
 
-                @include tabelt{
+                @include tablet{
                     width: 35vw;
                     margin: 0 auto;
                 }
@@ -386,7 +386,7 @@
             transform: translate3d(0px, 6rem, 0px);
             background-color: #e1eeda;
 
-            @include tabelt{ transform: translate3d(0px, 0px, 0px); }
+            @include tablet{ transform: translate3d(0px, 0px, 0px); }
             @include mobile{ transform: translate3d(0px, 0px, 0px); }
 
             h3{
@@ -405,7 +405,7 @@
     padding: 0 2.5rem;
     padding-top: 25rem;
 
-    @include tabelt{
+    @include tablet{
         min-height: auto;
         margin-bottom: 5rem;
         padding-top: 10rem;
@@ -425,7 +425,7 @@
         padding-top: 2rem;
         padding-bottom: 1rem;
 
-        @include tabelt{ max-width: none;padding-bottom: 9.5rem;}
+        @include tablet{ max-width: none;padding-bottom: 9.5rem;}
         @include mobile{
             max-width: 100%;
             padding-left: 1.5rem;
@@ -440,7 +440,7 @@
             width: 30%;
             padding-top: 0.5rem;
 
-            @include tabelt{ width: 20%; }
+            @include tablet{ width: 20%; }
             @include mobile{ width: 25%; }
 
             .event-box{
@@ -450,7 +450,7 @@
                 margin-bottom: 0.25rem;
 
                 @include mobile{ height: 9.825px; }
-                @include tabelt{ height: 10.2812px; }
+                @include tablet{ height: 10.2812px; }
                 
             }
             .number{
@@ -478,7 +478,7 @@
             line-height: 4.2rem;
             letter-spacing: -.1rem;
 
-            @include tabelt{
+            @include tablet{
                 font-size: 3rem;
                 line-height: 3.2rem;
                 margin-bottom: -5.5rem;
@@ -521,7 +521,7 @@
                 line-height: 1.5rem;
 
                 @include desktop{ max-width: 38rem; }
-                @include tabelt{ margin-top: 1.5rem; }
+                @include tablet{ margin-top: 1.5rem; }
                 @include mobile{ margin-top: 2rem; }
 
             }
@@ -700,7 +700,7 @@
     margin-top: 10rem;
     padding: 0 2.5rem;
 
-    @include tabelt{
+    @include tablet{
         width: 100%;
         margin-top: 5rem;
         padding: 0 1.5rem;
@@ -716,7 +716,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        @include tabelt{ max-width: none; }
+        @include tablet{ max-width: none; }
         @include mobile{
             max-width: 100vw;
             margin: 0;
@@ -733,7 +733,7 @@
             font-size: .75rem;
             line-height: .8rem;
 
-            @include tabelt{ margin-bottom: 3rem; }
+            @include tablet{ margin-bottom: 3rem; }
             @include mobile{ margin-bottom: 3rem; }
 
         }
@@ -750,7 +750,7 @@
             padding-bottom: 10rem;
             position: relative;
 
-            @include tabelt{ grid-template-rows: 18vw 18vw 18vw 18vw 18vw; }
+            @include tablet{ grid-template-rows: 18vw 18vw 18vw 18vw 18vw; }
             @include mobile{
                 display: grid;
                 gap: 1rem;
@@ -805,7 +805,7 @@
                         background-color: #ff8b4a;
                         padding: 0.3rem;
 
-                        @include tabelt{
+                        @include tablet{
                             width: 3rem;
                             height: 3rem;
                         }
@@ -821,7 +821,7 @@
                     flex-direction: column;
                     margin-top: 1rem;
 
-                    @include tabelt{
+                    @include tablet{
                         grid-row-gap: 0.2rem;
                         margin-top: 0.5rem;
                     }
@@ -836,7 +836,7 @@
                         font-size: 1.375rem;
                         line-height: 1.35rem;
 
-                        @include tabelt{ font-size: 1.1rem; }
+                        @include tablet{ font-size: 1.1rem; }
                         @include mobile{ font-size: 1.1rem; }
                     }
                     .mini-text{
@@ -907,7 +907,7 @@
         padding-left: 2.5rem;
         padding-right: 2.5rem;
 
-        @include tabelt{
+        @include tablet{
             padding-left: 1.5rem;
             padding-right: 1.5rem;
         }
@@ -930,7 +930,7 @@
             line-height: .8rem;
             color: #fbf9ed;
 
-            @include tabelt{max-width: none;}
+            @include tablet{max-width: none;}
             @include mobile{ max-width: 100%; }
         }
     }
@@ -974,7 +974,7 @@
                 height: 15vw;
                 background-color: #202829;
 
-                @include tabelt{ height: 21vh;}
+                @include tablet{ height: 21vh;}
                 @include mobile{ height: 5rem; }
 
                 .img-1{
@@ -1080,7 +1080,7 @@
         max-width: 75vw;
         margin: 0 auto;
 
-        @include tabelt{
+        @include tablet{
             max-width: none;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -1112,7 +1112,7 @@
                 background-color: #1c2729;
                 margin-bottom: 0.25rem;
 
-                @include tabelt{ height: 10.2344px; margin-bottom: 0.25rem;}
+                @include tablet{ height: 10.2344px; margin-bottom: 0.25rem;}
                 @include mobile{ height: 9.825px; margin-bottom: 0.25rem;}
             }
             .number{
@@ -1140,7 +1140,7 @@
             overflow: hidden;
             
             @include desktop{ max-width: 30rem; }
-            @include tabelt{ 
+            @include tablet{ 
                 font-size: 3rem;
                 line-height: 3.2rem;
             }
@@ -1171,7 +1171,7 @@
             padding: 0 2rem;
             margin-bottom: 2rem;
 
-            @include tabelt{ 
+            @include tablet{ 
                 font-size: 3rem;
                 line-height: 3.2rem;
             }
@@ -1190,10 +1190,10 @@
                 .col-middle{width: 60%;}
                 .col-right{width: 15%;height: 2.2rem;}
                 
-                @include tabelt{ max-width: none; }
+                @include tablet{ max-width: none; }
             }
 
-            @include tabelt{ padding: 0 1rem; }
+            @include tablet{ padding: 0 1rem; }
             @include mobile{ display: none; }
         }
         ul{
@@ -1237,7 +1237,7 @@
                     padding-left: 1rem;
                     padding-right: 1rem;
 
-                    @include tabelt{
+                    @include tablet{
                         max-width: none;
                         font-size: 1rem;
                     }
@@ -1272,7 +1272,7 @@
                         text-overflow: ellipsis;
 
                         @include desktop{ width: 62%; }
-                        @include tabelt{ width: 60%; }
+                        @include tablet{ width: 60%; }
                         @include mobile{
                             font-size: 1rem;
                             line-height: 1.6rem;
@@ -1321,7 +1321,7 @@
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-            @include tabelt{
+            @include tablet{
                 margin-left: 0;
                 padding: 0 1rem;
                 margin-top: 1.5rem;

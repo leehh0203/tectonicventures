@@ -1,4 +1,4 @@
-// history.scrollRestoration = "manual"
+history.scrollRestoration = "manual"
 
 //로고 로티
 var logoAnimation = bodymovin.loadAnimation({
@@ -30,11 +30,12 @@ let mm3 = gsap.matchMedia();
         .to('.header .logo-lottie',1,{opacity: 1},"a")
         .to('.intro-event',0.3,{delay: 2,opacity: 1})
 
-        .to('.header h1',2,{width: "15.2rem"},"3+=1")
+        .to('.header h1',2,{width: "15.2rem", height: "54.25px"},"3+=1")
         .from('.sc-visual .group-video',1,{yPercent: 110},"3")
         .to('.sc-visual .box1',{transform: 'translateY(0%)'},"3+=0.5")
         .to('.sc-visual .box2',{transform: 'translateY(0%)'},"3")
         .from('.header .symbol',0.3,{delay: 2,opacity: 0,},"3")
+        .from('.top-menu .btn-menu',0.3,{delay: 2,opacity: 0,},"3-=0.8")
 
         .to('.sc-visual .bg',1,{width: "0"},"4")
         .to('.sc-visual .box2',1,{height: '60%'},"4")
@@ -114,6 +115,7 @@ menuTl
 const menuT2 = gsap.timeline({})
     menuT2
     .to('.top-menu',{transform: 'translateY(0)',ease:'power3',duration:1,},'a')
+    .to('h1',{transform: 'translateY(0)',ease:'power3',duration:1,},'a-=0.35')
     .to('.top-menu-bg',{transform: 'translateY(0)',ease:'power3',duration:1,},'a')
   
 ScrollTrigger.create({
