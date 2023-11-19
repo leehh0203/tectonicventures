@@ -1,7 +1,7 @@
 history.scrollRestoration = "manual"
 
 //로고 로티
-var logoAnimation = bodymovin.loadAnimation({
+const logoAnimation = bodymovin.loadAnimation({
     container: $('.logo-lottie')[0],
     path: './assets/data/logo-motion.json', 
     renderer: 'svg', 
@@ -20,9 +20,9 @@ var logoAnimation = bodymovin.loadAnimation({
 //pc,테블릿
 gsap.registerPlugin(ScrollTrigger);
 
-let mm3 = gsap.matchMedia();
+const pcIntro = gsap.matchMedia();
 
-    mm3.add("(min-width: 767px)", () => {
+      pcIntro.add("(min-width: 767px)", () => {
 
         const introTl = gsap.timeline({})
         introTl
@@ -52,9 +52,9 @@ let mm3 = gsap.matchMedia();
 //모바일
 gsap.registerPlugin(ScrollTrigger);
 
-let mm4 = gsap.matchMedia();
+    const mIntro = gsap.matchMedia();
 
-    mm4.add("(max-width: 767px)", () => {
+    mIntro.add("(max-width: 767px)", () => {
 
         gsap.set('.sc-visual .text-group',{ opacity: 1})
         gsap.set('.sc-visual p',{ opacity: 1})
@@ -73,7 +73,7 @@ let mm4 = gsap.matchMedia();
 
 //header 모바일
 //햄버거 메뉴
-var menuAnimation = bodymovin.loadAnimation({
+ menuAnimation = bodymovin.loadAnimation({
     container: $('.btn-motion')[0],
     path: './assets/data/btn-menu-motion.json', 
     renderer: 'svg', 
@@ -99,6 +99,7 @@ $('.btn-menu').click(function(){
         document.body.style.overflow = 'hidden';
     }
     isAnimationReversed = !isAnimationReversed;
+    //마지막을 true로 만들어 클릭가능하도록 만들기
 });
 
 //메뉴 애니메이션
@@ -112,6 +113,7 @@ menuTl
 .to('.group-m-menu .deco-box',{duration:1.2,ease:'power3',transform:'translateY(0)'},'a')
 .from('.group-m-menu .box1',{delay: 0.4,duration:1.5,ease:'power3',top:'0'},"a")
 
+//모바일 상단 메뉴 타임라인
 const menuT2 = gsap.timeline({})
     menuT2
     .to('.top-menu',{transform: 'translateY(0)',ease:'power3',duration:1,},'a')
@@ -121,7 +123,10 @@ const menuT2 = gsap.timeline({})
 ScrollTrigger.create({
     start: "top top",
     onUpdate: (self) => {
+        //onUpdate는 애니메이션이 업데이트 될 때마다 호출
+        //self는 ScrollTrigger자체를 나타냄
         self.direction === -1 ? menuT2.play() : menuT2.reverse()
+        //direction속성을 확인하여 스크롤 방향이 위로 이동하는 경우
     }
 });
 
@@ -159,9 +164,9 @@ texteventTl
 //card pc,테블릿만 적용
 gsap.registerPlugin(ScrollTrigger);
 
-let mm = gsap.matchMedia();
+const pcEvent1 = gsap.matchMedia();
 
-mm.add("(min-width: 1025px)", () => {
+pcEvent1.add("(min-width: 1025px)", () => {
     const newideaT2 = gsap.timeline({
         scrollTrigger: {
             trigger:".sc-newidea",
@@ -177,9 +182,11 @@ mm.add("(min-width: 1025px)", () => {
 });
 
 //도형 카드 제목
-ScrollTrigger.batch('.group-card-inner .text-item', { //여러개 같이 쓰일때 gsap에서 제공해줌
+ScrollTrigger.batch('.group-card-inner .text-item', { 
+    //batch는 여러개 같이 쓰일때 gsap에서 제공해줌
     start: "0 100%",
 
+    //onEnter scroll-start ~ scroll-end사이
     onEnter: batch => {
         gsap.from(batch, {
         yPercent:-110,
@@ -191,31 +198,6 @@ ScrollTrigger.batch('.group-card-inner .text-item', { //여러개 같이 쓰일�
         });
     },
 });
-
-//카드 도형 lottie
-// var animation1 = bodymovin.loadAnimation({
-//     container: $('.lottie1')[0],
-//     path: './assets/data/motion1.json', 
-//     renderer: 'svg', 
-//     loop: true, 
-//     autoplay: true 
-//   });
-  
-// var animation2 = bodymovin.loadAnimation({
-//     container: $('.lottie2')[0],
-//     path: './assets/data/motion2.json', 
-//     renderer: 'svg', 
-//     loop: true, 
-//     autoplay: true 
-// });
-
-// var animation3 = bodymovin.loadAnimation({
-//     container: $('.lottie3')[0], // Required
-//     path: './assets/data/motion3.json', 
-//     renderer: 'svg', 
-//     loop: true, 
-//     autoplay: true 
-// });
 
 
 
@@ -261,6 +243,7 @@ visionT1
 visionT1.to('.sc-vision .menu-box .bg',{ xPercent: 100,backgroundColor: 'rgb(255, 139, 74)',},"a")
 visionT1.to('.sc-vision .menu-box .experts-team',{ color: 'rgb(255, 255, 255)',},"a")
 visionT1.from('.sc-vision .menu-box .corem-team',{ color: 'rgb(255, 255, 255)',},"a")
+//레블을 이용해서 동시에 백그라운드 색이 바뀌면서 글자색도 변경되도록 설정함
 
 //team_item 
 $('[data-scroll-y]').each(function(i,el){
@@ -295,15 +278,16 @@ ScrollTrigger.batch('.sc-vision .team_item .item', { //여러개를 선택할때
 
 //버튼 로티 호버했을때 모션
 const btnContainers = document.querySelectorAll(".btn-lottie");
+
 btnContainers.forEach(container => {
+  const player = container.querySelector("lottie-player");
+
   container.addEventListener("mouseover", () => {
-    const player = container.querySelector("lottie-player");
     player.setDirection(1);
     player.play();
   });
-
+//마우스가 올려졌을때 정방향으로 재생하고 마우스가 떠나면 역방향으로 재생하게함
   container.addEventListener("mouseleave", () => {
-    const player = container.querySelector("lottie-player");
     player.setDirection(-1);
     player.play();
   });
@@ -315,9 +299,9 @@ btnContainers.forEach(container => {
 //h2
 gsap.registerPlugin(ScrollTrigger);
 
-let mm2 = gsap.matchMedia();
+const pcEvent2 = gsap.matchMedia();
 
-    mm2.add("(min-width: 767px)", () => {
+    pcEvent2.add("(min-width: 767px)", () => {
     gsap.from('.sc-advisors .advisors-item',{
         scrollTrigger: {
             trigger:".sc-advisors",
@@ -331,6 +315,8 @@ let mm2 = gsap.matchMedia();
             grid: [5,5],
             from:"edges",
             axis: "x",
+            //가운데 축부터
+            //참고사이트:https://gsap.com/resources/getting-started/Staggers/
             amount: 0.3
         },
     })
@@ -414,6 +400,7 @@ gsap.from('.sc-directory ul > *',{
         scrub:3,
     },
     once: true,
+    //도달했을때 한번만 실행하도록
     duration:0.8,
     opacity:0,
     yPercent:100,
@@ -444,6 +431,7 @@ footerTl.to('.footer-graphic ._6',{top: '214.15px',ease:'power3'},"a")
 footerTl.to('.footer-graphic ._7',{height: '40%',ease:'power3'},"a")
 
 //마우스 이벤트
+//마우스를 따라다닐 수 있도록
 const customCursor = document.querySelector(".mouse");
 $('.footer-graphic').mousemove(function(e){
     gsap.to(customCursor,{
@@ -453,7 +441,6 @@ $('.footer-graphic').mousemove(function(e){
 })
 
 //도형 배경 투명하게 하기
-// const graphicItem = document.querySelectorAll('.graphic_item');
 $('.graphic_item').hover(function(){
     $('.graphic_item').addClass('on')
     $('.mouse').addClass('show')
@@ -466,9 +453,13 @@ $('.graphic_item').hover(function(){
 //도형 y축이동
 Draggable.create(".graphic_item", {
     type:"y",
+    //type를 y축설정으로 y축만 이동가능
 	bounds:".footer-graphic",
+    //움직가능한 영역설정
+
 	// edgeResistance:0,
 	// throwProps:true
+    //바운스효과가 생김
 });
 
 
